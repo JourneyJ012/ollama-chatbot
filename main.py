@@ -18,7 +18,7 @@ def listen_and_transcribe(mic): #two in one is easier :D
         print("Say something!")
         audio = r.listen(source)
         try:
-            text = r.recognize_sphinx(audio)
+            text = r.recognize_whisper(audio)
             print("You said: " + text)
             return text
         except sr.UnknownValueError:
